@@ -1,0 +1,180 @@
+@import "../../../common/stylus/mixin"
+.header
+    color : #fff
+    position relative
+    background :rgba(7,17,27,0.5)
+    overflow hidden
+    .content-wrapper
+      padding:24px 12px 18px 1.5rem /* 24/16 */
+      font-size: 0
+      .avatar
+        display: inline-block
+        vertical-align :top
+        & >img 
+          border-radius :2px;
+      .content
+        display: inline-block
+        margin-left : .625rem /* 10/16 */
+        .title
+          margin:2px 0 8px 0
+        .brand
+          display: inline-block
+          vertical-align :top
+          width: 1.875rem /* 30/16 */
+          height : 1.125rem /* 18/16 */
+          bg-image('img/brand')
+          background-size :1.875rem /* 30/16 */ 1.125rem /* 18/16 */
+          background-repeat:no-repeat
+        .name
+          margin-left : .375rem /* 6/16 */
+          font-size: 16px
+          line-height :1.125rem /* 18/16 */
+          font-weight bold
+        .description
+          margin-bottom : .625rem /* 10/16 */
+          line-height : .75rem /* 12/16 */
+          font-size : 12px
+        .support
+          .icon
+            display: inline-block
+            vertical-align :top
+            width: 12px
+            height :12px
+            margin-right :.25rem /* 4/16 */
+            background-size :12px 12px
+            background-repeat: no-repeat
+            &.decrease
+              bg-image('img/decrease_1')
+            &.discount
+              bg-image('img/discount_1')
+            &.guarantee
+              bg-image('img/guarantee_1')
+            &.invoice
+              bg-image('img/invoice_1')
+            &.special
+              bg-image('img/special_1')
+          .text
+            line-height :12px
+            font-size :12px
+    .bulletin-wrapper
+          height :1.75rem /* 28/16 */
+          line-height :28px
+          padding:0 22px 0 12px
+          white-space:nowrap
+          overflow:hidden
+          text-overflow ellipsis
+          background-color rgba(7,17,27,0.2)
+      .bulletin-title
+        display inline-block
+        vertical-align top
+        width 1.375rem /* 22/16 */
+        height .75rem /* 12/16 */
+        bg-image('img/bulletin')
+        background-size 22px 12px
+        background-repeat no-repeat
+        margin-top 8px //title高12px bulletin-wrapper高28px （28-12）除以2=8
+      .bulletin-text
+        font-size 10px
+        margin:0 4px
+        vertical-align top
+    .background-filter
+      position:absolute
+      width:100%
+      height 100%
+      top 0
+      left 0
+      z-index -1
+      filter:blur(10px)
+   
+    
+    
+    .fade-enter-active, .fade-leave-active 
+       transition : opacity .5s;
+    .fade-enter, .fade-leave-to
+        opacity : 0
+        background:rgba(7,17,27,0)
+    .openbulletin
+      position:fixed
+      z-index :100
+      top:0
+      left :0
+      width:100%
+      height :100%
+      overflow:auto
+      background:rgba(7,17,27,0.8)
+      .detail-wrapper
+        width:100%
+        min-height :100%
+        .detail-main
+          margin-top:64px
+          padding-bottom :64px
+          .name
+            line-height :1rem /* 16/16 */
+            text-align :center
+            font-size :16px
+            font-weight:700
+          .star-wrapper
+             margin-top:18px
+             padding:2px 0
+             text-align center
+          .line-title
+            display:flex
+            width:80%
+            margin:28px auto 28px auto
+            .line
+              flex:1
+              position: relative
+              top:-6px
+              border-bottom :1px solid rgba(255 ,255,255,0.2)
+            .text
+              padding:0 .75rem /* 12/16 */
+              font-size :14px
+              font-weight: bold
+          .supports 
+            width:80%
+            margin:0 auto
+            .support-item 
+              padding: 0 .75rem /* 12/16 */
+              margin-bottom :12px
+              font-size:0
+              &:last-child
+                margin-bottom 0
+              .suppicon
+                display inline-block
+                width 1rem /* 16/16 */
+                height 1rem /* 16/16 */
+                vertical-align top
+                margin-right .375rem /* 6/16 */
+                background-size 16px 1rem /* 16/16 */
+                background-repeat no-repeat
+                &.decrease
+                  bg-image('img/decrease_2')
+                &.discount
+                  bg-image('img/discount_2')
+                &.guarantee
+                  bg-image('img/guarantee_2')
+                &.invoice
+                  bg-image('img/invoice_2')
+                &.special
+                  bg-image('img/special_2')
+              .supptext
+                font-size 12px
+                line-height 16px
+          .bulletin
+              width:80%
+              margin:0 auto
+              .content  
+                padding:0 .75rem /* 12/16 */
+                line-height :1.5rem /* 24/16 */
+                font-size :12px
+      .detail-close
+         position: relative
+         width: 2rem
+         height :2rem /* 32/16 */
+         margin:-64px auto 0 auto
+         clear: both
+         font-size: 32px
+         .icon-close
+            display :block
+            text-align:center
+            
