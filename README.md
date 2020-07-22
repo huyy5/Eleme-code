@@ -1,5 +1,5 @@
 # sell-admin
-
+VUE2.0高仿饿了么APP
 > sell app
 
 ## Build Setup
